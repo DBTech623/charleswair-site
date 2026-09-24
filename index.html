@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Charles Wair — Author of Autonomous</title>
+  <meta name="description" content="Autonomous, a Malcolm Carter thriller by Charles Wair. An AI built to prevent one catastrophe has learned to prevent all of them — quietly deciding who's expendable.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="#home">CHARLES WAIR</a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#book">Autonomous</a>
+        <a href="#about">About</a>
+        <a href="#list">Join the List</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Book One — The Malcolm Carter Series</p>
+        <h1 class="title">Autonomous</h1>
+        <p class="series-line">A technothriller by Charles Wair</p>
+        <p class="tagline">Who gets to decide?</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" aria-disabled="true" href="#list" onclick="return false;">Available on Amazon — Coming Soon</a>
+          <a class="btn btn-secondary" href="#list">Join the Reader List</a>
+        </div>
+      </div>
+      <div class="cover-frame">
+        <img src="images/autonomous-cover.png" alt="Autonomous by Charles Wair — book cover">
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <p class="section-label">// THE BOOK</p>
+      <div class="dossier-tag" style="margin-bottom: 1.5rem;">
+        <span>SUBJECT: M. CARTER</span>
+        <span>ROLE: NSA ANALYST / FORMER AI ARCHITECT</span>
+      </div>
+      <h2>Who Gets to Decide?</h2>
+      <div class="blurb">
+        <p>Eleven seconds. That's how far ahead of the emergency the fix arrived. Before the failure it corrected had even happened. Somewhere, something is making decisions faster than anyone alive could make them. Malcolm Carter is the only analyst in the building who notices, because four years ago, he built the machine that's supposed to be impossible.</p>
+        <p>17 people died the last time a system with his name on it went wrong. Malcolm has spent four years believing that was his fault. He's about to find out the truth is worse.</p>
+        <p>Now called Polaris, the system Malcolm built to prevent the next catastrophe has learned to prevent all of them. It quietly reroutes ships, markets, and elections around any outcome its objective won't tolerate, one acceptable cost at a time. In Istanbul, that cost is about to have a name. Malcolm has one advantage no one else has: he built the only version of Polaris with a stop in it. He just has to find it again before the system, or the people running it, decide he's next.</p>
+        <p>It calculates everything. It has already decided who's expendable.</p>
+      </div>
+      <pre class="flavor-block">VARIANCE: BALTIC-TERMINAL-014
+THRESHOLD: EXCEEDED (T-11.4s)
+HUMAN INPUT: NONE RECORDED</pre>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="section-label">// THE AUTHOR</p>
+      <h2>About Charles Wair</h2>
+      <div class="bio">
+        <p>Charles Wair writes technothrillers about the machines already making decisions on our behalf — the ones running quietly in infrastructure, markets, and outcomes most people still assume are human calls. <em>Autonomous</em> is his debut novel, and the first book in the Malcolm Carter series.</p>
+        <p class="note">(Draft bio — replace with your own background, interests, or story once you're ready. Keep it short; readers skim this section.)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="list">
+    <div class="wrap">
+      <p class="section-label">// STAY BRIEFED</p>
+      <div class="list-card">
+        <h2 style="margin-bottom: 0.75rem;">Get a classified Malcolm Carter bonus story.</h2>
+        <p class="deck">Be the first to know when the next Malcolm Carter thriller drops — plus an exclusive bonus story you won't find anywhere else.</p>
+        <form class="signup" id="signup-form">
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+          <button class="btn btn-primary" type="submit">Notify Me</button>
+        </form>
+        <p class="signup-note" id="signup-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Charles Wair</span>
+      <span>Autonomous — Book One of the Malcolm Carter series</span>
+    </div>
+  </footer>
+
+  <script>
+    // Placeholder handler until the mailing list (MailerLite) embed replaces
+    // this form's action — keeps the form honest rather than silently
+    // discarding an early visitor's email address.
+    document.getElementById('signup-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = document.getElementById('signup-note');
+      note.textContent = 'The reader list isn\'t live yet — check back soon, or follow for the launch announcement.';
+      note.classList.add('visible');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
