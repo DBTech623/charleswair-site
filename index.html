@@ -76,11 +76,29 @@ HUMAN INPUT: NONE RECORDED</pre>
       <div class="list-card">
         <h2 style="margin-bottom: 0.75rem;">Get a classified Malcolm Carter bonus story.</h2>
         <p class="deck">Be the first to know when the next Malcolm Carter thriller drops — plus an exclusive bonus story you won't find anywhere else.</p>
-        <form class="signup" id="signup-form">
-          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-          <button class="btn btn-primary" type="submit">Notify Me</button>
-        </form>
-        <p class="signup-note" id="signup-note"></p>
+        <div id="mlb2-46337644" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-46337644">
+          <div class="row-form">
+            <form class="signup ml-block-form" action="https://assets.mailerlite.com/jsonp/2659458/forms/199550384885204355/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                  <input type="email" name="fields[email]" placeholder="you@email.com" required aria-label="Email address" autocomplete="email">
+                </div>
+              </div>
+              <div class="ml-form-embedSubmit">
+                <button class="btn btn-primary" type="submit">Notify Me</button>
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="row-success" style="display: none">
+            <p class="signup-note visible">You're in. Watch your inbox for the classified bonus story.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -93,16 +111,16 @@ HUMAN INPUT: NONE RECORDED</pre>
   </footer>
 
   <script>
-    // Placeholder handler until the mailing list (MailerLite) embed replaces
-    // this form's action — keeps the form honest rather than silently
-    // discarding an early visitor's email address.
-    document.getElementById('signup-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var note = document.getElementById('signup-note');
-      note.textContent = 'The reader list isn\'t live yet — check back soon, or follow for the launch announcement.';
-      note.classList.add('visible');
-      this.reset();
-    });
+    // MailerLite's own success-state callback — its embed JS calls this by
+    // name (ml_webform_success_<form id>) after a successful subscribe.
+    function ml_webform_success_46337644() {
+      document.querySelector('.ml-subscribe-form-46337644 .row-success').style.display = '';
+      document.querySelector('.ml-subscribe-form-46337644 .row-form').style.display = 'none';
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+  <script>
+    fetch("https://assets.mailerlite.com/jsonp/2659458/forms/199550384885204355/takel");
   </script>
 
 </body>

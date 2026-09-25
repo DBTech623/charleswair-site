@@ -275,10 +275,24 @@ form.signup {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
+  margin: 0;
+}
+
+/* MailerLite's embed wraps the input and button in their own divs (needed
+   for its JS to toggle success state) — these two wrappers are the actual
+   flex items now, not the input/button directly. */
+form.signup .ml-form-formContent {
+  flex: 1 1 240px;
+  margin: 0;
+}
+
+form.signup .ml-form-embedSubmit {
+  margin: 0;
+  display: flex;
 }
 
 form.signup input[type="email"] {
-  flex: 1 1 240px;
+  width: 100%;
   background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text);
@@ -292,6 +306,8 @@ form.signup input[type="email"]:focus {
   outline: none;
   border-color: var(--accent);
 }
+
+form.signup .ml-form-embedSubmit button.loading { display: none; }
 
 .signup-note {
   font-family: "Inter", sans-serif;
