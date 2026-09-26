@@ -8,7 +8,8 @@ Author site for Charles Wair / *Autonomous* (Malcolm Carter, Book One). Static H
 - `styles.css` — styling; reuses the book's own Inter + IBM Plex Mono type system and the cover's dossier-placard motif
 - `images/autonomous-cover.png` — front cover art
 - `CNAME` — custom domain for GitHub Pages (charleswair.com)
-- `downloads/steady-lantern.pdf` — the reader-magnet bonus story, hosted here so MailerLite's welcome automation has a stable link to send. Public at `https://charleswair.com/downloads/steady-lantern.pdf` (or the `dbtech623.github.io` path until HTTPS is enforced). Source: `Bonus_Story_Steady_Lantern.pdf` in the book_reimagined repo — re-copy here if the story ever changes.
+
+The bonus-story PDF is no longer hosted in this repo — it was pulled (and purged from git history) after discovering the repo is public and the file was browsable via GitHub regardless of the mailing-list gate. It's now uploaded directly to MailerLite's own file storage and attached to the welcome automation from there instead.
 
 ## Still needed before this is fully live
 
@@ -19,8 +20,8 @@ Author site for Charles Wair / *Autonomous* (Malcolm Carter, Book One). Static H
    - GitHub's current instructions: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 2. ~~Set up MailerLite~~ — done. Form `199550384885204355` (group/account `2659458`) is wired into the `#list` section, restyled with the site's own CSS instead of MailerLite's default light theme. Its markup keeps the exact classes/IDs MailerLite's `webforms.min.js` depends on for the success-state toggle (`ml-form-embedContainer`, `.row-form`/`.row-success`, and the `ml_webform_success_46337644()` callback) — don't rename those without checking the embed still fires.
 3. **Replace the "Coming Soon" Amazon button** in `index.html` with the real product link once the book is live, and remove `aria-disabled`.
-4. **Replace the About section bio** with your own words — the current copy is a placeholder.
-5. **Set up a MailerLite automation** to send the bonus story automatically on signup — the PDF is now hosted at `https://charleswair.com/downloads/steady-lantern.pdf` (see below); the automation itself has to be built in MailerLite's dashboard, which needs your login.
+4. ~~Replace the About section bio~~ — done, 2026-09-26.
+5. ~~Set up a MailerLite automation~~ — done, live 2026-09-26. Trigger: joins "Autonomous" group → sends the bonus story email from `hello@charleswair.com` (authenticated sending domain), PDF attached via MailerLite's own file storage.
 
 ## Local preview
 
